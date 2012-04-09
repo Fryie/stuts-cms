@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120409043341) do
+ActiveRecord::Schema.define(:version => 20120409045240) do
 
   create_table "attachment_versions", :force => true do |t|
     t.integer  "original_record_id"
@@ -263,6 +263,35 @@ ActiveRecord::Schema.define(:version => 20120409043341) do
   end
 
   add_index "html_blocks", ["deleted"], :name => "index_html_blocks_on_deleted"
+
+  create_table "info_versions", :force => true do |t|
+    t.integer  "original_record_id"
+    t.integer  "version"
+    t.text     "content"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "name"
+    t.boolean  "published",          :default => false
+    t.boolean  "deleted",            :default => false
+    t.boolean  "archived",           :default => false
+    t.string   "version_comment"
+    t.integer  "created_by_id"
+    t.integer  "updated_by_id"
+  end
+
+  create_table "infos", :force => true do |t|
+    t.integer  "version"
+    t.integer  "lock_version",  :default => 0
+    t.text     "content"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "name"
+    t.boolean  "published",     :default => false
+    t.boolean  "deleted",       :default => false
+    t.boolean  "archived",      :default => false
+    t.integer  "created_by_id"
+    t.integer  "updated_by_id"
+  end
 
   create_table "link_versions", :force => true do |t|
     t.integer  "original_record_id"

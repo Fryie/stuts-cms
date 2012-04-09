@@ -1,6 +1,7 @@
 <%= render "partials/head" %>
 
 <body>
+<%= cms_toolbar %>
 <div class="container">
 <header id="pageHeader">
   <%= image_tag "stuts.svg" %>
@@ -29,7 +30,7 @@
 <div id="main" role="main" class="column span-12 colborder">
   <%= container :main %>
 </div> <!-- end #main -->
-<!-- <%= render_portlet "Info" %> -->
+<%= render_portlet "Info" %>
 <footer class="column span-24">
 <p>Copyright Blahblah!</p>
 </footer> <!-- end #footer -->

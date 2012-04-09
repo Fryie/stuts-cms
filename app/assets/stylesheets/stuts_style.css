@@ -10,7 +10,7 @@ Creation date: Apr. 8. 2012
 body {
 	font-family: 'Lora', Georgia, "Lucida Bright", "Times New Roman", Times, serif;
 	font-size: 62.5%;
-	background-image: url(../images/bg.gif);
+	background-image: url(bg.gif);
 }
 
 h1 {
@@ -34,6 +34,7 @@ p {
 
 #pageHeader img {
 	width: 200px;
+	margin: 0;
 	opacity: 0.3;
 	filter:alpha(opacity=30); /* for IE */
 }
@@ -163,4 +164,13 @@ footer {
 	margin-top: 40px;
 	border-top: 1px solid #bbb;
 	padding-top: 10px;
+}
+
+/** Fix for the BrowserCMS toolbar **/
+iframe {
+	margin-top: -16px;
+}
+
+iframe + .container #pageHeader h1 {
+	top: 167px;
 }
