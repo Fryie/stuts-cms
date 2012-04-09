@@ -1,0 +1,166 @@
+/** 
+General style file for the StuTS Homepage
+To be used in conjunction with the Blueprint stylesheets + liquid plugin
+
+Author: Pierpaolo Frasa
+Creation date: Apr. 8. 2012
+**/
+
+/** General rules **/
+body {
+	font-family: 'Lora', Georgia, "Lucida Bright", "Times New Roman", Times, serif;
+	font-size: 62.5%;
+	background-image: url(../images/bg.gif);
+}
+
+h1 {
+	font-family: 'Lora', Georgia, "Lucida Bright", "Times New Roman", Times, serif;
+	line-height: 1.2em;
+}
+
+a {
+	text-decoration: none;
+	color: #01708F;
+}
+
+p {
+	font-size: 1.4em;
+}
+
+/** Rules for specific elements **/
+#pageHeader {
+	margin-left: 20%;
+}
+
+#pageHeader img {
+	width: 200px;
+	opacity: 0.3;
+	filter:alpha(opacity=30); /* for IE */
+}
+
+#pageHeader h1 {
+	font-size: 3em;
+	position: absolute;
+	top: 20px;
+	left: 30%;
+}
+
+nav ul {
+	list-style-type: none;
+	margin: 0;
+}
+
+a:hover, #subNav a:hover {
+	color: #A67400;
+}
+
+#mainNav {
+	background-color: black;
+	font-size: 1.8em;
+	width: 98%;
+	margin: auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+
+	box-shadow: 5px 5px 5px #333;
+	-moz-box-shadow: 5px 5px 5px #333;
+	-webkit-box-shadow: 5px 5px 5px #333;
+	-o-box-shadow: 5px 5px 5px #333;
+}
+
+#mainNav ul {
+	margin: auto;
+	display: table;
+}
+
+#mainNav li {
+	display: table-cell;
+	width: 130px;
+}
+
+#mainNav a {
+	color: white;
+	text-align: center;
+	display: block;
+	width: 107px;
+	padding: 4px 10px;
+}
+
+#mainNav a:hover {
+	background-color: #A67400;
+	border-radius: 2px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+}
+
+#mainNav a.active {
+	background-color: #8861F2;
+	border-radius: 2px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+}
+
+#subNav {
+	text-align: right;
+	margin-top: 20px;
+}
+
+#subNav li {
+	font-variant: small-caps;
+	font-size: 1.6em;
+}
+
+#subNav a {
+	color: #000;
+}
+
+#subNav a.active {
+	color: #FF2300;
+}
+
+#main .breadcrumbs {
+	text-indent: 0;
+	font-family: Georgia, "Lucida Bright", "Times New Roman", Times, serif;
+	font-style: italic;
+}
+
+#main h1 {
+	font-size: 1.8em;
+	font-weight: bold;
+}
+
+#main p {
+	text-indent: 2em;
+	margin: 0;
+}
+
+.info li {
+	margin-bottom: 15px;
+	list-style-type: none;
+}
+
+.info li h1 {
+	font-family: Georgia, "Lucida Bright", "Times New Roman", Times, serif;
+	font-size: 1.6em;
+	font-style: italic;
+	margin-bottom: 2px;
+}
+
+.info li p {
+	font-family: Georgia, "Lucida Bright", "Times New Roman", Times, serif;
+	margin: 0;
+	line-height: 1.2em;
+}
+
+footer {
+	text-align: center;
+	margin-top: 40px;
+	border-top: 1px solid #bbb;
+	padding-top: 10px;
+}

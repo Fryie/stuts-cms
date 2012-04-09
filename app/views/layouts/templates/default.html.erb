@@ -1,17 +1,40 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-    <title><%= page_title %></title>
-    <%= yield :html_head %>
-  </head>
-  <body style="margin: 0; padding: 0; text-align: center;">
-    <%= cms_toolbar %>
-    <div id="wrapper" style="width: 700px; margin: 0 auto; text-align: left; padding: 30px">
-      Breadcrumbs: <%= render_breadcrumbs %>
-      Main Menu: <%= render_menu %>
-      <h1><%= page_title %></h1>
-      <%= container :main %>
-    </div>
-  </body>
+<%= render "partials/head" %>
+
+<body>
+<div class="container">
+<header id="pageHeader">
+  <img src="stuts.svg" alt="StuTS" />
+  <h1>Studentische Tagung Sprachwissenschaft</h1>
+</header>
+
+<nav id="mainNav">
+  <ul>
+    <li><a href="#" class="active">Home</a></li>
+    <li><a href="#">Die StuTS</a></li>
+    <li><a href="#">Archiv</a></li>
+    <li><a href="#">Links</a></li>
+    <li><a href="#">Anmeldung</a></li>
+  </ul>
+</nav>
+<nav id="subNav" class="column span-5 colborder">
+  <ul>
+    <li><a href="#" class="active">Home</a></li>
+    <li><a href="#">Das ist</a></li>
+    <li><a href="#">ein Untermenü</a></li>
+    <li><a href="#">Heißer Scheiß</a></li>
+    <li><a href="#">Noch heißerer Scheiß</a></li>
+  </ul>
+</nav>
+
+<div id="main" role="main" class="column span-12 colborder">
+  <%= container :main %>
+</div> <!-- end #main -->
+<ul class="info column span-5 last">
+  <!-- render "info" -->
+</ul> <!-- end .info -->
+<footer class="column span-24">
+<p>Copyright Blahblah!</p>
+</footer> <!-- end #footer -->
+</div> <!-- end .container -->
+</body>
 </html>

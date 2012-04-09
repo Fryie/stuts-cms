@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8" />
+
+<!-- Nice title font, via Google Web Fonts -->
+<%= stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Lora:400,700' %>
+
+<!-- Liquid Blueprint CSS, see https://github.com/joshuaclayton/blueprint-css/blob/master/LICENSE -->
+<%= stylesheet_link_tag "reset", "liquid", "typography" %>
+
+<!-- Own CSS -->
+<%= stylesheet_link_tag "stuts_style" %>
+
+<!-- Print stylesheets, Blueprint and own -->
+<%= stylesheet_link_tag "print", "stuts_print", media:"print" %>
+
+<!-- HTML5 Shiv for poor IE<9 users -->
+<!--[if lt IE 9]>
+<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+</head>

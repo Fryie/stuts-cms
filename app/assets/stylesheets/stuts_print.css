@@ -1,0 +1,54 @@
+/** 
+Print style file for the StuTS Homepage
+To be used in conjunction with the Blueprint stylesheets + liquid plugin
+
+Author: Pierpaolo Frasa
+Creation date: Apr. 8. 2012
+**/
+body {
+	background: none;
+	font-family: Georgia, "Lucida Bright", "Times New Roman", Times, serif;
+	font-size: 75%;
+}
+
+h1 {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	line-height: 1.2em;
+}
+
+#pageHeader {
+	margin-left: 10%;
+}
+
+#pageHeader img {
+	width: 200px;
+	float: left;
+	opacity: 1;
+	filter:alpha(opacity=100); /* for IE */
+}
+
+#pageHeader h1 {
+	margin-left: 120px;
+}
+
+nav {
+	display: none;
+}
+
+#main {
+	clear: left;
+	width: 100%;
+}
+
+.breadcrumbs a:link, .breadcrumbs a:visited { 
+	font-weight:normal;
+	text-decoration:none;
+}
+
+.breadcrumbs a:link:after, .breadcrumbs a:visited:after {
+	content:"";
+}
+
+.info {
+	display: none;
+}
