@@ -1,0 +1,6 @@
+<ul class="info column span-5 last">
+	<% @infos.each do |info| %>
+		<li><h1><%= info.name %></h1>
+		<%=raw info.content %></li>
+	<% end %>
+</ul> <!-- end .info -->

@@ -1,4 +1,6 @@
 Stuts::Application.routes.draw do
+  namespace :cms  do content_blocks :infos end
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
