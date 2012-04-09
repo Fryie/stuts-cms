@@ -1,0 +1,11 @@
+<nav id="mainNav">
+	<ul>
+		<% items.each do |item| %>
+			<li>
+			<a href="<%= item[:url] %>"
+			<% if has_selected_item_as_child?(items,item) %>
+			class="active"
+			<% end %>><%= item[:name] %></a></li>
+		<% end %>
+	</ul>
+</nav>

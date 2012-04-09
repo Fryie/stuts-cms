@@ -7,6 +7,9 @@ gem 'rails', '3.1.4'
 
 gem 'mysql2'
 
+gem 'tidy_ffi'
+gem 'rack-tidy-ffi'
+
 
 # Gems used only for assets and not required
 # in production environments by default.

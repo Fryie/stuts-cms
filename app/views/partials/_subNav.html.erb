@@ -1,0 +1,9 @@
+<nav id="subNav" class="column span-5 colborder">
+	<ul>
+		<% items.each do |item| %>
+			<li>
+			<a href="<%= item[:url] %>" <% if item[:selected] %>class="active"<% end %>>
+			<%= item[:name] %></a></li>
+		<% end %>
+	</ul>
+</nav>
