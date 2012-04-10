@@ -16,6 +16,7 @@ body {
 h1 {
 	font-family: 'Lora', Georgia, "Lucida Bright", "Times New Roman", Times, serif;
 	line-height: 1.2em;
+	margin: 0;
 }
 
 a {
@@ -125,10 +126,25 @@ a:hover, #subNav a:hover {
 	color: #FF2300;
 }
 
-#main .breadcrumbs {
+#main ul.breadcrumbs {
 	text-indent: 0;
 	font-family: Georgia, "Lucida Bright", "Times New Roman", Times, serif;
 	font-style: italic;
+	font-size: 1.4em;
+	margin: 0;
+}
+
+.breadcrumbs li {
+	list-style-type: none;
+	display: inline;
+}
+
+.breadcrumbs li:before {
+	content: "> ";
+}
+
+.breadcrumbs li.first:before {
+	content: "";
 }
 
 #main h1 {

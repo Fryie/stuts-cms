@@ -7,7 +7,7 @@ gem 'rails', '3.1.4'
 
 gem 'mysql2'
 
-gem 'tidy_ffi'
+gem 'tidy_ffi', git:'https://github.com/libc/tidy_ffi', ref:"db85e" # need edge version!
 gem 'rack-tidy-ffi'
 
 
@@ -35,7 +35,11 @@ gem 'jquery-rails'
 # gem 'capistrano'
 
 # To use debugger
-# gem 'ruby-debug19', :require => 'ruby-debug'
+group :development do 
+  gem 'linecache19', '0.5.13', :path => "~/.rvm/gems/ruby-1.9.3-p#{RUBY_PATCHLEVEL}@stuts/gems/linecache19-0.5.13/"
+  gem 'ruby-debug-base19', '0.11.26', :path => "~/.rvm/gems/ruby-1.9.3-p#{RUBY_PATCHLEVEL}@stuts/gems/ruby-debug-base19-0.11.26/"
+  gem 'ruby-debug19', :require => 'ruby-debug'
+end
 
 group :test do
   # Pretty printed test output
