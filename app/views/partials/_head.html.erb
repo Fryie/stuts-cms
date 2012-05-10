@@ -20,6 +20,17 @@
 <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 
+<!-- some IE<8 hacks -->
+<!--[if lt IE 8]>
+<style type="text/css">
+	#mainNav ul {
+		margin-left: 30%;
+	}
+	#mainNav li, #mainNav a {
+		display: inline;
+	}
+</style>
+<![endif]-->
 <%= csrf_meta_tags %>
 
 <title>Studentische Tagung Sprachwissenschaft | <%= page_title %></title>

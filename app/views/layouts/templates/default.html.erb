@@ -4,7 +4,15 @@
 <%= cms_toolbar %>
 <div class="container">
 <header id="pageHeader">
-  <%= image_tag "stuts.svg" %>
+  <!--[if lt IE 9]>
+	<img src="stuts.png" alt="StuTS" />
+	<![endif]-->
+	<!--[if gte IE 9]>
+	<img src="stuts.svg" alt="StuTS" />
+	<![endif]-->
+	<!--[if !IE]> -->
+	<img src="stuts.svg" alt="StuTS" />
+	<!-- <![endif]-->
   <h1>Studentische Tagung Sprachwissenschaft</h1>
 </header>
 <%= render_menu from_top:0, partial:"partials/mainNav" %>

@@ -16,20 +16,10 @@ h1 {
 	line-height: 1.2em;
 }
 
-#pageHeader {
-	margin-left: 10%;
-}
-
 #pageHeader img {
-	width: 200px;
-	float: left;
-	opacity: 1;
-	filter:alpha(opacity=100); /* for IE */
+	width: 600px;
 }
 
-#pageHeader h1 {
-	margin-left: 120px;
-}
 
 nav {
 	display: none;
