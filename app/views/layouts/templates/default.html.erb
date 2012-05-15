@@ -5,15 +5,15 @@
 <div class="container">
 <header id="pageHeader">
   <!--[if lt IE 9]>
-	<img src="stuts.png" alt="StuTS" />
+	<%= image_tag "stuts.png" %>
 	<![endif]-->
 	<!--[if gte IE 9]>
-	<img src="stuts.svg" alt="StuTS" />
+	<%= image_tag "stuts.svg" %>
 	<![endif]-->
 	<!--[if !IE]> -->
-	<img src="stuts.svg" alt="StuTS" />
+	<%= image_tag "stuts.svg" %>
 	<!-- <![endif]-->
-  <h1>Studentische Tagung Sprachwissenschaft</h1>
+  <h1 class="hide">Studentische Tagung Sprachwissenschaft</h1>
 </header>
 <%= render_menu from_top:0, partial:"partials/mainNav" %>
 <%= render_menu from_top:1, partial:"partials/subNav" %>

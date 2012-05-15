@@ -117,11 +117,12 @@ a:hover, #subNav a:hover {
 }
 
 #main .breadcrumbs {
+	margin: 0;
 	text-indent: 0;
 	font-family: Georgia, "Lucida Bright", "Times New Roman", Times, serif;
 	font-style: italic;
+	font-size: 1.4em;
 }
-
 
 .breadcrumbs li {
 	list-style-type: none;
@@ -129,7 +130,7 @@ a:hover, #subNav a:hover {
 }
 
 .breadcrumbs li:before {
-	content: "> ";
+	content: "» ";
 }
 
 .breadcrumbs li.first:before {
