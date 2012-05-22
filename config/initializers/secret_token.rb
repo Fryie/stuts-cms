@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-Stuts::Application.config.secret_token = 'c6c8710eb374c1355fe5352a00e7727219f35629ddee50d8f116d1c8607b651f48c4e37ac5feeab6d91dbf08787d8d217d3bc27b9d0058e47ca3d9cd9679f340'
+Stuts::Application.config.secret_token = '6670945a5f339dda9c5ebc9d70bcd94eee4b4496b0714fa006d52e8b7a0caaa33dae614c42fcc4830b7b4c0b941edc964df5f7a20b06c9e1160d1ea5a622aa44'
