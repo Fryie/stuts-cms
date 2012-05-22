@@ -12,10 +12,10 @@ development:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: usr_web4_5
+  database: stuts_development
   pool: 5
-  username: web4
-  password: 1Vsh[5ileE
+  username: root
+  password:
   socket: /var/run/mysqld/mysqld.sock
 
 # Warning: The database defined as "test" will be erased and
@@ -25,18 +25,18 @@ test:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: usr_web4_6
+  database: stuts_test
   pool: 5
-  username: web4
-  password: 1Vsh[5ileE
+  username: root
+  password:
   socket: /var/run/mysqld/mysqld.sock
 
 production:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: usr_web4_4
+  database: stuts_production
   pool: 5
-  username: web4
-  password: 1Vsh[5ileE
+  username: root
+  password:
   socket: /var/run/mysqld/mysqld.sock
