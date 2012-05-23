@@ -17,14 +17,14 @@ ActiveRecord::Schema.define(:version => 20120522230122) do
     t.integer  "category_type_id"
     t.integer  "parent_id"
     t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
   end
 
   create_table "category_types", :force => true do |t|
     t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "cms_attachment_versions", :force => true do |t|
@@ -34,8 +34,8 @@ ActiveRecord::Schema.define(:version => 20120522230122) do
     t.string   "file_location"
     t.string   "data_content_type"
     t.integer  "data_file_size"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                            :null => false
+    t.datetime "updated_at",                            :null => false
     t.string   "data_file_name"
     t.boolean  "published",          :default => false
     t.boolean  "deleted",            :default => false
@@ -60,8 +60,8 @@ ActiveRecord::Schema.define(:version => 20120522230122) do
     t.string   "file_location"
     t.string   "data_content_type"
     t.integer  "data_file_size"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                            :null => false
+    t.datetime "updated_at",                            :null => false
     t.string   "data_file_name"
     t.boolean  "published",          :default => false
     t.boolean  "deleted",            :default => false
@@ -84,8 +84,8 @@ ActiveRecord::Schema.define(:version => 20120522230122) do
     t.integer  "connectable_version"
     t.string   "container"
     t.integer  "position"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",          :null => false
+    t.datetime "updated_at",          :null => false
   end
 
   add_index "connectors", ["connectable_type"], :name => "index_connectors_on_connectable_type"
@@ -95,16 +95,16 @@ ActiveRecord::Schema.define(:version => 20120522230122) do
 
   create_table "content_type_groups", :force => true do |t|
     t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "content_types", :force => true do |t|
     t.string   "name"
     t.integer  "content_type_group_id"
     t.integer  "priority",              :default => 2
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                           :null => false
+    t.datetime "updated_at",                           :null => false
   end
 
   add_index "content_types", ["content_type_group_id"], :name => "index_content_types_on_content_type_group_id"
@@ -118,8 +118,8 @@ ActiveRecord::Schema.define(:version => 20120522230122) do
     t.string   "format"
     t.string   "handler"
     t.text     "body"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                            :null => false
+    t.datetime "updated_at",                            :null => false
     t.boolean  "published",          :default => false
     t.boolean  "deleted",            :default => false
     t.boolean  "archived",           :default => false
@@ -136,8 +136,8 @@ ActiveRecord::Schema.define(:version => 20120522230122) do
     t.string   "format"
     t.string   "handler"
     t.text     "body"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                       :null => false
+    t.datetime "updated_at",                       :null => false
     t.boolean  "published",     :default => false
     t.boolean  "deleted",       :default => false
     t.boolean  "archived",      :default => false
@@ -154,8 +154,8 @@ ActiveRecord::Schema.define(:version => 20120522230122) do
     t.text     "body"
     t.string   "content_type"
     t.datetime "delivered_at"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
   end
 
   create_table "file_block_versions", :force => true do |t|
@@ -171,8 +171,8 @@ ActiveRecord::Schema.define(:version => 20120522230122) do
     t.string   "version_comment"
     t.integer  "created_by_id"
     t.integer  "updated_by_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                            :null => false
+    t.datetime "updated_at",                            :null => false
   end
 
   add_index "file_block_versions", ["original_record_id"], :name => "index_file_block_versions_on_original_record_id"
@@ -190,8 +190,8 @@ ActiveRecord::Schema.define(:version => 20120522230122) do
     t.boolean  "archived",           :default => false
     t.integer  "created_by_id"
     t.integer  "updated_by_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                            :null => false
+    t.datetime "updated_at",                            :null => false
   end
 
   add_index "file_blocks", ["deleted"], :name => "index_file_blocks_on_deleted"
@@ -223,8 +223,8 @@ ActiveRecord::Schema.define(:version => 20120522230122) do
     t.string   "name"
     t.boolean  "guest",      :default => false
     t.boolean  "cms_access", :default => false
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                    :null => false
+    t.datetime "updated_at",                    :null => false
   end
 
   add_index "group_types", ["cms_access"], :name => "index_group_types_on_cms_access"
@@ -233,8 +233,8 @@ ActiveRecord::Schema.define(:version => 20120522230122) do
     t.string   "name"
     t.string   "code"
     t.integer  "group_type_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
   end
 
   add_index "groups", ["code"], :name => "index_groups_on_code"
@@ -251,8 +251,8 @@ ActiveRecord::Schema.define(:version => 20120522230122) do
     t.string   "version_comment"
     t.integer  "created_by_id"
     t.integer  "updated_by_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                                                :null => false
+    t.datetime "updated_at",                                                :null => false
   end
 
   add_index "html_block_versions", ["original_record_id"], :name => "index_html_block_versions_on_original_record_id"
@@ -268,8 +268,8 @@ ActiveRecord::Schema.define(:version => 20120522230122) do
     t.boolean  "archived",                          :default => false
     t.integer  "created_by_id"
     t.integer  "updated_by_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                                           :null => false
+    t.datetime "updated_at",                                           :null => false
   end
 
   add_index "html_blocks", ["deleted"], :name => "index_html_blocks_on_deleted"
@@ -278,8 +278,8 @@ ActiveRecord::Schema.define(:version => 20120522230122) do
     t.integer  "original_record_id"
     t.integer  "version"
     t.text     "content"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                            :null => false
+    t.datetime "updated_at",                            :null => false
     t.string   "name"
     t.boolean  "published",          :default => false
     t.boolean  "deleted",            :default => false
@@ -293,8 +293,8 @@ ActiveRecord::Schema.define(:version => 20120522230122) do
     t.integer  "version"
     t.integer  "lock_version",  :default => 0
     t.text     "content"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                       :null => false
+    t.datetime "updated_at",                       :null => false
     t.string   "name"
     t.boolean  "published",     :default => false
     t.boolean  "deleted",       :default => false
@@ -309,8 +309,8 @@ ActiveRecord::Schema.define(:version => 20120522230122) do
     t.string   "name"
     t.string   "url"
     t.boolean  "new_window",         :default => false
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                            :null => false
+    t.datetime "updated_at",                            :null => false
     t.boolean  "published",          :default => false
     t.boolean  "deleted",            :default => false
     t.boolean  "archived",           :default => false
@@ -325,8 +325,8 @@ ActiveRecord::Schema.define(:version => 20120522230122) do
     t.string   "name"
     t.string   "url"
     t.boolean  "new_window",     :default => false
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                        :null => false
+    t.datetime "updated_at",                        :null => false
     t.boolean  "published",      :default => false
     t.boolean  "deleted",        :default => false
     t.boolean  "archived",       :default => false
@@ -340,8 +340,8 @@ ActiveRecord::Schema.define(:version => 20120522230122) do
     t.string   "type"
     t.string   "name"
     t.string   "value"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
   end
 
   create_table "page_routes", :force => true do |t|
@@ -349,8 +349,8 @@ ActiveRecord::Schema.define(:version => 20120522230122) do
     t.string   "pattern"
     t.integer  "page_id"
     t.text     "code"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "page_versions", :force => true do |t|
@@ -371,8 +371,8 @@ ActiveRecord::Schema.define(:version => 20120522230122) do
     t.string   "version_comment"
     t.integer  "created_by_id"
     t.integer  "updated_by_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                            :null => false
+    t.datetime "updated_at",                            :null => false
   end
 
   add_index "page_versions", ["original_record_id"], :name => "index_page_versions_on_original_record_id"
@@ -394,8 +394,8 @@ ActiveRecord::Schema.define(:version => 20120522230122) do
     t.boolean  "archived",           :default => false
     t.integer  "created_by_id"
     t.integer  "updated_by_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                            :null => false
+    t.datetime "updated_at",                            :null => false
     t.integer  "latest_version"
   end
 
@@ -408,8 +408,8 @@ ActiveRecord::Schema.define(:version => 20120522230122) do
     t.string   "full_name"
     t.string   "description"
     t.string   "for_module"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   create_table "portlet_attributes", :force => true do |t|
@@ -427,8 +427,8 @@ ActiveRecord::Schema.define(:version => 20120522230122) do
     t.boolean  "deleted",       :default => false
     t.integer  "created_by_id"
     t.integer  "updated_by_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                       :null => false
+    t.datetime "updated_at",                       :null => false
   end
 
   add_index "portlets", ["name"], :name => "index_portlets_on_name"
@@ -436,8 +436,8 @@ ActiveRecord::Schema.define(:version => 20120522230122) do
   create_table "redirects", :force => true do |t|
     t.string   "from_path"
     t.string   "to_path"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   add_index "redirects", ["from_path"], :name => "index_redirects_on_from_path"
@@ -446,8 +446,8 @@ ActiveRecord::Schema.define(:version => 20120522230122) do
     t.string   "node_type"
     t.integer  "node_id"
     t.integer  "position"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
     t.string   "ancestry"
   end
 
@@ -459,8 +459,8 @@ ActiveRecord::Schema.define(:version => 20120522230122) do
     t.string   "path"
     t.boolean  "root",       :default => false
     t.boolean  "hidden",     :default => false
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                    :null => false
+    t.datetime "updated_at",                    :null => false
   end
 
   add_index "sections", ["path"], :name => "index_sections_on_path"
@@ -469,8 +469,8 @@ ActiveRecord::Schema.define(:version => 20120522230122) do
     t.string   "name"
     t.string   "domain"
     t.boolean  "the_default"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   create_table "taggings", :force => true do |t|
@@ -478,14 +478,14 @@ ActiveRecord::Schema.define(:version => 20120522230122) do
     t.integer  "taggable_id"
     t.string   "taggable_type"
     t.integer  "taggable_version"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
   end
 
   create_table "tags", :force => true do |t|
     t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "tasks", :force => true do |t|
@@ -495,8 +495,8 @@ ActiveRecord::Schema.define(:version => 20120522230122) do
     t.text     "comment"
     t.date     "due_date"
     t.datetime "completed_at"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
   end
 
   add_index "tasks", ["assigned_to_id"], :name => "index_tasks_on_assigned_to_id"
