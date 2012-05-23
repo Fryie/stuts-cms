@@ -46,3 +46,8 @@ group :test do
   gem 'turn', '~> 0.8.3', :require => false
 end
 gem "browsercms", "3.5.0.rc2"
+
+group :production do
+  gem 'uglifier'
+  gem 'therubyracer'
+end
