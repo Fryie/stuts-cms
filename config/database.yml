@@ -35,8 +35,8 @@ production:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: stuts_production
+  database: usr_web4_4
   pool: 5
-  username: root
-  password:
+  username: web4
+  password: 1Vsh[5ileE
   socket: /var/run/mysqld/mysqld.sock
