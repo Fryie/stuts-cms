@@ -8,6 +8,12 @@
 #
 # And be sure to use new-style password hashing:
 #   http://dev.mysql.com/doc/refman/5.0/en/old-client.html
+
+<%
+  require 'bcdatabase'
+  bcdb = Bcdatabase.load
+%>
+
 development:
   adapter: mysql2
   encoding: utf8
@@ -31,12 +37,4 @@ test:
   password:
   socket: /var/run/mysqld/mysqld.sock
 
-production:
-  adapter: mysql2
-  encoding: utf8
-  reconnect: false
-  database: usr_web4_4
-  pool: 5
-  username: web4
-  password: 1Vsh[5ileE
-  socket: /var/run/mysqld/mysqld.sock
+<%= bcdb.production :prod, :usr_web4_4 %>
