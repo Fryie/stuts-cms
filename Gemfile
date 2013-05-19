@@ -51,3 +51,6 @@ group :production do
   gem 'uglifier'
   gem 'therubyracer'
 end
+
+# protect production passwords
+gem 'bcdatabase'

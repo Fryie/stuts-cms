@@ -40,6 +40,11 @@ GEM
       activerecord (>= 2.2.2)
     ansi (1.4.2)
     arel (3.0.2)
+    bcdatabase (1.2.3)
+      activesupport (>= 2.0)
+      highline (~> 1.5, < 1.6.9)
+      i18n
+      thor (~> 0.14)
     browsercms (3.5.0.rc2)
       ancestry (~> 1.2.4)
       ckeditor_rails (~> 3.6.2.2)
@@ -64,6 +69,7 @@ GEM
     execjs (1.4.0)
       multi_json (~> 1.0)
     ffi (1.0.11)
+    highline (1.6.8)
     hike (1.2.1)
     i18n (0.6.0)
     journey (1.0.3)
@@ -141,6 +147,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bcdatabase
   browsercms (= 3.5.0.rc2)
   coffee-rails
   jquery-rails
