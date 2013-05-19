@@ -16,3 +16,7 @@
 
 # Ignore .rmvrc
 .rvmrc
+
+# Ignore cached and compiled assets
+/public/cache
+/public/assets
