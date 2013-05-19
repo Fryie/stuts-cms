@@ -45,7 +45,7 @@ group :test do
   # Pretty printed test output
   gem 'turn', '~> 0.8.3', :require => false
 end
-gem "browsercms", "3.5.0.rc2"
+gem "browsercms", "3.5.6"
 
 group :production do
   gem 'uglifier'
