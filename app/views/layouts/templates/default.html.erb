@@ -1,31 +1,31 @@
 <%= render "partials/head" %>
 
 <body>
-<%= cms_toolbar %>
-<div class="container">
-<header id="pageHeader">
-  <!--[if lt IE 9]>
-	<%= image_tag "stuts.png" %>
-	<![endif]-->
-	<!--[if gte IE 9]>
-	<%= image_tag "stuts.svg" %>
-	<![endif]-->
-	<!--[if !IE]> -->
-	<%= image_tag "stuts.svg" %>
-	<!-- <![endif]-->
-  <h1 class="hide">Studentische Tagung Sprachwissenschaft</h1>
-</header>
-<%= render_menu from_top:0, partial:"partials/mainNav" %>
-<%= render_menu from_top:1, partial:"partials/subNav" %>
+  <%= cms_toolbar %>
+  <div class="container">
+    <header id="pageHeader">
+      <!--[if lt IE 9]>
+      <%= image_tag "stuts.png" %>
+      <![endif]-->
+      <!--[if gte IE 9]>
+      <%= image_tag "stuts.svg" %>
+      <![endif]-->
+      <!--[if !IE]> -->
+      <%= image_tag "stuts.svg" %>
+      <!-- <![endif]-->
+      <h1 class="hide">Studentische Tagung Sprachwissenschaft</h1>
+    </header>
+    <%= render_menu from_top:0, partial:"partials/mainNav" %>
+    <%= render_menu from_top:1, partial:"partials/subNav" %>
 
-<div id="main" role="main" class="column span-12 colborder">
-  <%= render_breadcrumbs %>
-  <%= container :main %>
-</div> <!-- end #main -->
-<%= render_portlet "Info" %>
-<footer class="column span-24">
-<p>Copyright Blahblah!</p>
-</footer> <!-- end #footer -->
-</div> <!-- end .container -->
+    <div id="main" role="main" class="column span-12 colborder">
+      <%= render_breadcrumbs %>
+      <%= container :main %>
+    </div> <!-- end #main -->
+    <%= render_portlet "Info" %>
+    <footer class="column span-24">
+      <p>Copyright Blahblah!</p>
+    </footer> <!-- end #footer -->
+  </div> <!-- end .container -->
 </body>
 </html>
