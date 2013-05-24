@@ -20,3 +20,7 @@
 # Ignore cached and compiled assets
 /public/cache
 /public/assets
+
+# bundle gems locally on production server (permission issues)
+# don't include this in repo
+/vendor/bundle
