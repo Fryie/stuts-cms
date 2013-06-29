@@ -7,9 +7,6 @@ gem 'rails'
 
 gem 'mysql2'
 
-gem 'tidy_ffi', git:'https://github.com/libc/tidy_ffi', ref:"db85e" # need edge version!
-gem 'rack-tidy-ffi'
-
 
 # Gems used only for assets and not required
 # in production environments by default.
