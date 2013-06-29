@@ -1,5 +1,0 @@
-Steps for Tidy to work properly:
-1. Install HTML5 Tidy (remove other tidy, if present): https://github.com/w3c/tidy-html5
-(Install the shared library, not the CL tool)
-2. Run "ldconfig -v"
-3. Make sure you have TidyFFI >=db85e (from Git) - see Gemfile

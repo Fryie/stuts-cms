@@ -24,3 +24,6 @@
 # bundle gems locally on production server (permission issues)
 # don't include this in repo
 /vendor/bundle
+
+# no binstubs
+/bin
