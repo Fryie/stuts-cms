@@ -27,8 +27,3 @@
 
 # no binstubs
 /bin
-
-# capistrano stuff
-/shared
-/releases
-.sass-cache
