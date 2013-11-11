@@ -1,11 +1,3 @@
-GIT
-  remote: https://github.com/libc/tidy_ffi
-  revision: db85ed83240bbf7cf96936de9a7779f47b792ce2
-  ref: db85e
-  specs:
-    tidy_ffi (0.1.4)
-      ffi (>= 0.3.5)
-
 GEM
   remote: http://rubygems.org/
   specs:
@@ -71,7 +63,6 @@ GEM
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
-    ffi (1.0.11)
     highline (1.6.8)
     hike (1.2.2)
     i18n (0.6.1)
@@ -101,8 +92,6 @@ GEM
       rack
     rack-test (0.6.2)
       rack (>= 1.0)
-    rack-tidy-ffi (0.2.1)
-      tidy_ffi (>= 0.1.4)
     rails (3.2.13)
       actionmailer (= 3.2.13)
       actionpack (= 3.2.13)
@@ -157,10 +146,8 @@ DEPENDENCIES
   coffee-rails
   jquery-rails
   mysql2
-  rack-tidy-ffi
   rails
   sass-rails
   therubyracer
-  tidy_ffi!
   turn (~> 0.8.3)
   uglifier
