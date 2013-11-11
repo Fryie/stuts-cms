@@ -12,9 +12,14 @@ body {
 	background-image: url(bg.gif);
 }
 
-h1 {
+h1, h2 {
 	font-family: 'Lora', Georgia, "Lucida Bright", "Times New Roman", Times, serif;
 	line-height: 1.2em;
+}
+
+h2 {
+  margin-top: 0.75em;
+  margin-bottom: 0.2em;
 }
 
 a {
@@ -143,9 +148,19 @@ a:hover, #subNav a:hover {
 }
 
 #main p {
-	text-indent: 2em;
 	margin: 0;
 }
+
+#main p + p {
+  text-indent: 2em;
+}
+
+#main .text-image-left img {
+  float: left;
+}
+
+#main .text-image-left p {
+  text-indent: 0;
 
 .info li {
 	margin-bottom: 15px;
