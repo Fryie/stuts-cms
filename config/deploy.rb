@@ -13,6 +13,8 @@ default_run_options[:pty] = true
 
 set :deploy_via, :remote_cache
 
+MAIN_SERVER = 'jwmail.de'
+
 namespace :data do
   require 'yaml'
   set :sql_dump_file, "dump.#{application}.sql"
@@ -36,8 +38,7 @@ namespace :data do
 
     require 'yaml'
 
-    database_yml = ""
-    run "cat #{current_path}/config/database.yml" do |_, _, database_yml| end
+    database_yml = capture "erb #{current_path}/config/database.yml"
     config = YAML::load(database_yml)['production']
 
     run "mysqldump #{mysql_options(config, true)}"+
@@ -53,12 +54,12 @@ namespace :data do
 
     logger.debug "rsyncing #{sql_dump_file} from #{application}"
     system "rsync -lrp "+
-      "#{user}@#{application}:#{current_path}/tmp/#{sql_dump_file} tmp/data"
+      "#{user}@#{MAIN_SERVER}:#{current_path}/tmp/#{sql_dump_file} tmp/data"
     run "rm #{current_path}/tmp/#{sql_dump_file}"
 
     logger.debug "rsyncing assets from #{application}"
     system "rsync -lrp --delete "+
-      "#{user}@#{application}:#{shared_path}/assets tmp/data/public"
+      "#{user}@#{MAIN_SERVER}:#{shared_path}/assets tmp/data/public"
   end
 
   desc <<-DESC
@@ -66,7 +67,7 @@ namespace :data do
     data:cache_prod_data or data:load_from_prod to create the cache.
   DESC
   task :load_from_cache do
-    config = YAML::load_file('config/database.yml')['development']
+    config = YAML.load(ERB.new(File.read('config/database.yml')).result)['development']
     if File.exist?("tmp/data/#{sql_dump_file}") 
       mysql_load = "mysql #{mysql_options(config)} < tmp/data/#{sql_dump_file}"
       logger.debug %(executing "#{mysql_load.sub(/-p\S+/, '-px')}")
@@ -81,11 +82,11 @@ namespace :data do
   # Return MySQL options for a specific configuration.
   def mysql_options(config, prompt_for_password=false)
     if config['password'] 
-      password_opt = prompt_for_password ? " -p" : " -p#{config['password']}" 
+      password_opt = prompt_for_password ? " -p" : " -p #{config['password']}"
     else
       password_opt = ""
     end
-    "-u #{config['username']} -h #{config['host']} #{config['database']}"+ 
+    "-u #{config['username']} #{config['database']}"+
       password_opt
   end
 
