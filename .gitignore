@@ -27,3 +27,5 @@
 
 # no binstubs
 /bin
+
+.ruby-version
