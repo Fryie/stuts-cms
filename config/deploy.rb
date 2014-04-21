@@ -15,6 +15,12 @@ set :deploy_via, :remote_cache
 
 MAIN_SERVER = 'jwmail.de'
 
+task :link_shared_directories do
+  run "ln -s #{shared_path}/uploads #{release_path}/uploads"
+end
+
+after "deploy:update_code", :link_shared_directories
+
 namespace :data do
   require 'yaml'
   set :sql_dump_file, "dump.#{application}.sql"

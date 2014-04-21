@@ -1,6 +1,8 @@
 Stuts::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 
+  config.cms.attachments.storage_directory = File.join(Rails.root, 'uploads')
+
   config.cms.site_domain = "neu.stuts.de"
 
   # Code is not reloaded between requests
