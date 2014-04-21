@@ -163,6 +163,7 @@ a:hover, #subNav a:hover {
 .info li {
 	margin-bottom: 15px;
 	list-style-type: none;
+  clear: both;
 }
 
 .info li h1 {
