@@ -24,7 +24,8 @@
     </div> <!-- end #main -->
     <%= render_portlet "Info" %>
     <footer class="column span-24">
-      <p>Copyright 2012 Stuts e.V.</p>
+      <p>Copyright <%= Time.zone.now.year %> Stuts e.V. | 
+      <%= link_to "Kontakt und Impressum", '/kontakt' %></p>
     </footer> <!-- end #footer -->
   </div> <!-- end .container -->
 </body>
