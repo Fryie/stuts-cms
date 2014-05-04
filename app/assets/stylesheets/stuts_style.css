@@ -158,6 +158,7 @@ a:hover, #subNav a:hover {
 
 #main .text-image-left img {
   float: left;
+  margin-right: 10px;
 }
 
 .info li {
