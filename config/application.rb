@@ -55,5 +55,7 @@ module Stuts
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+    config.cms.ckeditor.configuration_file = '/assets/ckeditor_config.js'
   end
 end
