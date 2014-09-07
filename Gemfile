@@ -20,7 +20,7 @@ group :test do
   gem 'turn', '~> 0.8.3', :require => false
 end
 
-gem "browsercms", "3.5.7"
+gem "browsercms", github: 'Fryie/browsercms', branch: '3.5.x-js-fix'
 
 group :production do
   gem 'uglifier'
