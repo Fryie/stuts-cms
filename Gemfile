@@ -27,5 +27,9 @@ group :production do
   gem 'therubyracer'
 end
 
+group :development, :test do
+  gem 'debugger'
+end
+
 # protect production passwords
 gem 'bcdatabase'
