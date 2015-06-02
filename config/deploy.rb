@@ -1,4 +1,5 @@
 require 'bundler/capistrano'
+require 'fileutils'
 
 set :application, "stuts-cms"
 set :repository,  "git@github.com:Fryie/stuts-cms"
