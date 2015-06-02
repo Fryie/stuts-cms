@@ -179,3 +179,6 @@ DEPENDENCIES
   therubyracer
   turn (~> 0.8.3)
   uglifier
+
+BUNDLED WITH
+   1.10.2
