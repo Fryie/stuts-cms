@@ -17,9 +17,10 @@
 # Ignore .rmvrc
 .rvmrc
 
-# Ignore cached and compiled assets
+# Ignore cached and compiled assets and uploads
 /public/cache
 /public/assets
+uploads
 
 # bundle gems locally on production server (permission issues)
 # don't include this in repo
