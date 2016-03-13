@@ -1,8 +1,8 @@
 source 'http://rubygems.org'
-ruby '1.9.3'
+ruby '2.3.0'
 
 gem 'rails'
-gem 'mysql2'
+gem 'mysql2', '~> 0.3.6'
 gem 'capistrano', '2.15.5'
 
 # Gems used only for assets and not required
@@ -27,7 +27,7 @@ group :production do
 end
 
 group :development, :test do
-  gem 'debugger'
+  gem 'byebug'
 end
 
 # protect production passwords
