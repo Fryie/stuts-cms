@@ -36,4 +36,4 @@ test:
   password:
   socket: /var/run/mysqld/mysqld.sock
 
-<%= bcdb.production :prod, :usr_web4_4 %>
+<%= bcdb.production :prod, :stuts_cms %>
