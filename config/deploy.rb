@@ -1,20 +1,24 @@
 require 'bundler/capistrano'
 require 'fileutils'
+require 'capistrano-rbenv'
 
 set :application, "stuts-cms"
-set :repository,  "git@github.com:Fryie/stuts-cms"
-server "jwmail.de", :app, :web, :db, :primary => true
+set :repository,  "https://github.com/Fryie/stuts-cms"
+server "141.84.137.37", :app, :web, :db, :primary => true, port: 800
 
 set :scm, :git
-set :deploy_to, "/var/www/web4/html/stuts-cms"
-set :user, "piru"
+set :deploy_to, "/var/www/stuts"
+set :user, "deploy"
 set :branch, "master"
+set :use_sudo, false
+set :rbenv_ruby_version, '2.3.0'
+set :rbenv_path, '/usr/local/rbenv'
 
 default_run_options[:pty] = true
 
 set :deploy_via, :remote_cache
 
-MAIN_SERVER = 'jwmail.de'
+MAIN_SERVER = '141.84.137.37'
 
 task :link_shared_directories do
   run "ln -s #{shared_path}/uploads #{release_path}/uploads"
