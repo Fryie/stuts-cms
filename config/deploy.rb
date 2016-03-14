@@ -24,7 +24,12 @@ task :link_shared_directories do
   run "ln -s #{shared_path}/uploads #{release_path}/uploads"
 end
 
+task :set_permissions do
+  run "chgrp -R www-data #{release_path}/public"
+end
+
 after "deploy:update_code", :link_shared_directories
+after "deploy:update_code", :set_permissions
 
 namespace :data do
   require 'yaml'
