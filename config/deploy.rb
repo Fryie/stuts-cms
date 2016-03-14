@@ -11,7 +11,7 @@ set :deploy_to, "/var/www/stuts"
 set :user, "deploy"
 set :branch, "master"
 set :use_sudo, false
-set :rbenv_ruby_version, '2.3.0'
+set :rbenv_ruby_version, '2.1.8'
 set :rbenv_path, '/usr/local/rbenv'
 
 default_run_options[:pty] = true
